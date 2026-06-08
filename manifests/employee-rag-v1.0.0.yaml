@@ -1,0 +1,51 @@
+version: employee-rag-v1.0.0
+environment: dev
+
+model:
+  provider: groq
+  name: openai/gpt-oss-120b
+  base_url: https://api.groq.com/openai/v1
+  api_key: GROQ_API_KEY
+  temperature: 0.1
+  max_tokens: 1000
+
+dataset:
+  path: evaluation/qa_dataset.json
+  version: 1.0
+
+prompt:
+  name: employee_assistant
+  version: 1
+
+retrieval:
+  enabled: true
+  vector_store: chromadb
+  collection_name: employee_handbook
+  embedding_provider: voyage
+  embedding_model: voyage-3-large
+  check_embedding_ctx_length: false
+  chunk_size: 800
+  chunk_overlap: 150
+  top_k: 5
+  reranker: null
+
+evaluation:
+  ragas: true
+  scoring_mode: offline_proxy
+  metrics:
+    - faithfulness
+    - answer_relevancy
+    - answer_correctness
+    - context_precision
+    - context_recall
+
+performance:
+  capture_latency: true
+  capture_token_usage: true
+
+gates:
+  context_relevance: 0.80
+  faithfulness: 0.85
+  response_relevance: 0.85
+  completeness: 0.80
+  hallucination_rate: 0.10

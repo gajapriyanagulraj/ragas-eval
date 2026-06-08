@@ -1,0 +1,22 @@
+{
+  "id": "Q001",
+  "question": "How many annual leave days are employees entitled to?",
+  "answer": "Regular full\u2011time employees are entitled to **24 days of annual leave per year**. Part\u2011time employees receive a prorated amount based on their scheduled hours.",
+  "contexts": [
+    "Probationary periods, introductory reviews, and employment eligibility checks may apply depending on role and location. New employees are expected to complete onboarding tasks, security training, required tax forms, and benefits enrollment by the published deadlines. Managers should set clear goals for the first 30, 60, and 90 days and provide practical feedback during onboarding.\n\nLeave Policy\n\nRegular full-time employees receive 24 days of annual leave per year. Annual leave is intended for vacation, rest, personal commitments, and planned time away from work. Part-time employees receive prorated annual leave based on their scheduled hours. Annual leave accrues throughout the year unless local law or a written employment agreement provides a different method.",
+    "Benefits may include medical insurance, dental insurance, vision insurance, life insurance, disability coverage, retirement savings, employee assistance services, wellness resources, parental leave, and paid time off. Employees should review coverage options carefully and make elections before enrollment deadlines. Some changes can be made only during open enrollment or after a qualifying life event.\n\nEmployees receive two paid volunteer days each calendar year. Volunteer days may be used for service with eligible nonprofit, educational, environmental, community, or public-interest organizations. Volunteer days must be approved by the manager in advance and recorded in the time-off system. Unused volunteer days do not carry over and are not paid out at separation.",
+    "Employees should request planned annual leave at least two weeks in advance. Requests should be submitted through the company's time-off system and should include the start date, end date, and any notes needed for coverage planning. Managers should approve or deny requests promptly based on workload, team coverage, project deadlines, and fairness across the team. Approval should be documented in the time-off system before travel or other commitments are finalized.",
+    "Paid company holidays are published before the start of each calendar year. If a holiday falls on a weekend, Human Resources will announce the observed day. Employees who support customer operations, infrastructure, or critical releases may be asked to work on a holiday. When holiday work is required, managers must coordinate alternative time off or applicable pay treatment according to local rules.\n\nBereavement leave, parental leave, jury duty leave, military leave, and other legally protected leaves are available as required by law and company policy. Employees should contact Human Resources as early as possible when they expect to need an extended leave. Human Resources will explain eligibility, documentation, pay treatment, benefits continuation, and return-to-work expectations.",
+    "Employees may work from home up to three days per week with manager approval unless their role has a different written arrangement. Teams may set anchor days when employees are expected to attend the office for planning, collaboration, customer visits, training, or team activities. Managers should apply work-from-home expectations consistently and should focus on outcomes, responsiveness, and collaboration rather than physical presence alone."
+  ],
+  "sources": [
+    "employee_handbook.txt"
+  ],
+  "ground_truth": "Employees receive 24 days of annual leave per year.",
+  "retrieval_time_ms": 528.32,
+  "generation_time_ms": 901.18,
+  "total_latency_ms": 1429.5,
+  "input_tokens": 721,
+  "output_tokens": 127,
+  "total_tokens": 848
+}

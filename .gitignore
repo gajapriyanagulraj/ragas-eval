@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.venv/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+
+# Local/generated vector index. Recreate with: python src/ingest.py
+chroma_db/
+
+# Local tool/cache artifacts
+.pytest_cache/
+.ruff_cache/

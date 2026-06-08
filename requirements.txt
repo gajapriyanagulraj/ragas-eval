@@ -1,0 +1,12 @@
+chromadb
+voyageai
+openai
+streamlit
+ragas
+datasets
+pandas
+python-dotenv
+pyyaml
+langchain-text-splitters
+langchain-openai
+langchain-voyageai

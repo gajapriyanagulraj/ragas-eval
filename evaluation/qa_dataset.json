@@ -1,0 +1,27 @@
+[
+  {
+    "id": "Q001",
+    "question": "How many annual leave days are employees entitled to?",
+    "expected_answer": "Employees receive 24 days of annual leave per year."
+  },
+  {
+    "id": "Q002",
+    "question": "Can employees work remotely from another country?",
+    "expected_answer": "Remote work from another country requires manager and HR approval."
+  },
+  {
+    "id": "Q003",
+    "question": "What is the reimbursement limit for travel expenses?",
+    "expected_answer": "Travel expenses are reimbursed up to $2000 per trip."
+  },
+  {
+    "id": "Q004",
+    "question": "How often must passwords be changed?",
+    "expected_answer": "Passwords must be rotated every 90 days."
+  },
+  {
+    "id": "Q005",
+    "question": "How frequently are performance reviews conducted?",
+    "expected_answer": "Performance reviews are conducted twice per year."
+  }
+]

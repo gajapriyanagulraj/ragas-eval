@@ -1,0 +1,225 @@
+Employee Handbook
+
+Company Overview
+
+RagPro Systems is a software and services company that builds practical tools for internal knowledge management, analytics, and operational automation. The company values clear communication, dependable execution, customer trust, security, and continuous learning. This handbook explains common employment policies for regular full-time and part-time employees. It is intended to make everyday decisions easier and to give employees a single reference for expectations across leave, remote work, travel, expenses, performance, security, benefits, conduct, and employment changes.
+
+The handbook is not an employment contract. Policies may be updated when business needs, legal requirements, or operating practices change. When a policy changes, Human Resources will publish the updated policy and communicate the effective date. Employees are responsible for reading updates and asking questions when a policy is unclear. Managers are responsible for applying policies consistently and escalating exceptions to Human Resources before making commitments.
+
+RagPro Systems expects employees to act with integrity and good judgment. Employees should be honest in records, respectful in communication, careful with company assets, and attentive to customer and colleague needs. The company supports direct discussion of problems, early escalation of risks, and documented decisions. Employees are encouraged to raise concerns with their manager, Human Resources, Legal, or the anonymous ethics channel when they believe a rule, policy, or law may have been violated.
+
+Most company information is shared on internal systems, team meetings, project documents, and official announcements. Employees should use the latest published version of any policy when making decisions. If a manager's direction conflicts with a written policy, the employee should ask the manager and Human Resources to clarify the correct approach before proceeding. Exceptions must be documented in writing.
+
+Employment Basics
+
+Employees are classified as full-time, part-time, temporary, intern, contractor, or consultant based on the nature of the relationship and applicable law. Full-time employees are normally scheduled for 40 hours per week. Part-time employees work fewer scheduled hours and may receive prorated benefits based on local rules and plan terms. Contractors and consultants are not employees and must follow the terms of their contract and the company's security and confidentiality requirements.
+
+The normal workweek runs from Monday through Friday. Standard business hours are 9:00 a.m. to 6:00 p.m. local time, with one hour for lunch. Teams may define core collaboration hours when employees are expected to be available for meetings and urgent coordination. Employees should keep their calendar current, respond to time-sensitive messages, and notify their manager when availability changes unexpectedly.
+
+Time records must be accurate. Non-exempt employees must record all hours worked, including overtime, training time, required meetings, and approved travel time where applicable. Overtime must be approved in advance by the manager unless urgent circumstances make advance approval impossible. Employees must not work off the clock, ask another person to record time for them, or change time records to hide actual hours worked.
+
+Probationary periods, introductory reviews, and employment eligibility checks may apply depending on role and location. New employees are expected to complete onboarding tasks, security training, required tax forms, and benefits enrollment by the published deadlines. Managers should set clear goals for the first 30, 60, and 90 days and provide practical feedback during onboarding.
+
+Leave Policy
+
+Regular full-time employees receive 24 days of annual leave per year. Annual leave is intended for vacation, rest, personal commitments, and planned time away from work. Part-time employees receive prorated annual leave based on their scheduled hours. Annual leave accrues throughout the year unless local law or a written employment agreement provides a different method.
+
+Employees should request planned annual leave at least two weeks in advance. Requests should be submitted through the company's time-off system and should include the start date, end date, and any notes needed for coverage planning. Managers should approve or deny requests promptly based on workload, team coverage, project deadlines, and fairness across the team. Approval should be documented in the time-off system before travel or other commitments are finalized.
+
+Employees are encouraged to take leave regularly and avoid unnecessary accumulation. A limited carryover may be allowed where permitted by local law and company policy. Carryover balances must be used by the deadline communicated by Human Resources. Unused leave at separation will be handled according to local law and the employee's applicable plan rules.
+
+Sick leave is available when an employee is ill, injured, attending medical appointments, caring for an eligible family member, or handling health-related needs covered by law. Employees should notify their manager as soon as practical when they cannot work due to illness. For absences longer than three consecutive workdays, Human Resources may request documentation consistent with law and privacy requirements.
+
+Paid company holidays are published before the start of each calendar year. If a holiday falls on a weekend, Human Resources will announce the observed day. Employees who support customer operations, infrastructure, or critical releases may be asked to work on a holiday. When holiday work is required, managers must coordinate alternative time off or applicable pay treatment according to local rules.
+
+Bereavement leave, parental leave, jury duty leave, military leave, and other legally protected leaves are available as required by law and company policy. Employees should contact Human Resources as early as possible when they expect to need an extended leave. Human Resources will explain eligibility, documentation, pay treatment, benefits continuation, and return-to-work expectations.
+
+Work From Home Policy
+
+RagPro Systems supports work from home when the role, team needs, and employee performance allow it. Employees working from home are expected to maintain a professional workspace, reliable internet connection, secure device handling, and normal availability during agreed working hours. Working from home is a work arrangement, not a substitute for dependent care, medical leave, or other protected time away.
+
+Employees may work from home up to three days per week with manager approval unless their role has a different written arrangement. Teams may set anchor days when employees are expected to attend the office for planning, collaboration, customer visits, training, or team activities. Managers should apply work-from-home expectations consistently and should focus on outcomes, responsiveness, and collaboration rather than physical presence alone.
+
+Employees must protect confidential information when working from home. Company devices should be locked when unattended. Paper notes containing sensitive information should be stored securely and shredded when no longer needed. Employees should avoid discussing confidential matters where household members, visitors, or neighbors can overhear. Public Wi-Fi should not be used for company work unless the approved VPN is active.
+
+The company may provide equipment such as a laptop, headset, monitor, keyboard, mouse, or security key based on role requirements. Employees must take reasonable care of company equipment and return it promptly when requested or when employment ends. Home office furniture, internet service, electricity, and other household costs are not reimbursed unless required by law or approved in writing.
+
+Remote Work Policy
+
+Remote work means performing the role from a location away from the assigned office on a recurring or long-term basis. Remote work arrangements must be approved by the employee's manager and Human Resources. Approval depends on role suitability, customer requirements, employment law, tax obligations, payroll feasibility, data security, time zone coverage, and team operating needs.
+
+Remote work from another country requires manager and HR approval. Employees must not begin working from another country until approval is documented. International remote work can create immigration, tax, payroll, benefits, insurance, and data transfer obligations for both the employee and the company. The company may deny or limit international remote work even when the employee can perform the job technically from that location.
+
+Employees who want to relocate must submit a request before changing their primary work location. The request should include the proposed city and country, expected start date, duration, working hours, and reason for relocation. Human Resources will review legal and payroll feasibility. Managers will review customer impact, collaboration needs, and time zone coverage. A relocation request is not approved until the employee receives written confirmation.
+
+Remote employees must remain reachable during agreed working hours, attend required meetings, meet performance standards, and travel to company or customer sites when required by the role. Travel for required events may be reimbursed according to the travel policy if approved in advance. Remote work approval can be changed or withdrawn if business needs change, performance issues arise, security requirements cannot be met, or the arrangement becomes impractical.
+
+Travel Policy
+
+Business travel must have a legitimate business purpose and should be planned cost-effectively. Employees should use video meetings when travel is not necessary. Travel must be approved by the manager before booking unless an emergency prevents advance approval. International travel may require additional approval from department leadership, Legal, Security, or Human Resources.
+
+Employees should book flights, hotels, and rental cars through the approved travel platform when available. Economy class is the standard for flights under six hours. Premium economy or business class may be approved for longer flights, medical accommodations, or customer requirements. Employees should choose safe, reasonably priced lodging near the business location. Luxury hotels, unnecessary upgrades, and personal travel costs are not reimbursable.
+
+Travel expenses are reimbursed up to $2000 per trip. This limit includes airfare, lodging, local transportation, meals, baggage fees, visa fees, and other ordinary business travel costs. Expenses above the limit require written approval from the department head before they are incurred. Conference fees, customer event fees, and group travel booked centrally may be budgeted separately when approved by Finance.
+
+Employees may combine personal travel with business travel if the arrangement does not increase company cost, interfere with work obligations, or create security issues. The company will reimburse only the business portion of the trip. Personal guests, vacation lodging, sightseeing, personal insurance, and leisure upgrades are not reimbursable. Employees must clearly separate personal and business costs in the expense report.
+
+Expense Reimbursement
+
+Employees should spend company funds carefully and only for approved business purposes. Reimbursable expenses include reasonable business travel, approved customer meals, required software, role-specific supplies, professional memberships, and training approved by the manager. Expenses must be supported by receipts, business purpose, date, amount, vendor, and attendee names when meals or events are involved.
+
+Expense reports should be submitted within 15 calendar days of completing travel or making an approved business purchase. Late submissions may be delayed, denied, or require additional approval. Employees should submit expenses through the company's expense system and should use the correct project code, cost center, and currency. Finance may request clarification or additional documentation before processing reimbursement.
+
+Employees must not split expenses to avoid approval thresholds, create false receipts, submit personal purchases as business expenses, or approve their own expenses. Managers are responsible for reviewing expenses for business purpose, policy compliance, and budget availability. Finance performs periodic audits and may require repayment of improper reimbursements.
+
+Company credit cards may be issued to employees who travel frequently or make recurring approved purchases. Cardholders must use the card only for business expenses and must submit receipts by the published deadline. Lost or stolen cards must be reported immediately to Finance and Security. Misuse of a company card may result in card cancellation, repayment obligations, disciplinary action, or termination.
+
+Performance Reviews
+
+Performance reviews are conducted twice per year. The midyear review focuses on progress, feedback, changing priorities, and development needs. The year-end review evaluates results, impact, collaboration, values, and readiness for future responsibilities. Managers should provide feedback throughout the year so review outcomes do not come as a surprise.
+
+Employees and managers should set measurable goals aligned to team priorities. Good goals define expected outcomes, key milestones, dependencies, and quality expectations. Goals may change when business priorities change. When goals change, the manager and employee should document the update and discuss how success will be measured.
+
+Performance is assessed using multiple inputs, including goal achievement, quality of work, customer impact, ownership, communication, collaboration, security awareness, and demonstration of company values. For people managers, performance also includes team health, coaching, hiring quality, execution discipline, inclusion, and responsible resource planning.
+
+If performance concerns arise, managers should address them promptly and directly. A performance improvement plan may be used when expectations are not being met. The plan should describe specific gaps, required improvements, support available, checkpoints, and timeline. Successful completion of a plan does not guarantee future employment, and failure to improve may lead to further action.
+
+Promotion Process
+
+Promotions recognize sustained performance at a higher level of responsibility. A promotion is not based only on tenure, effort, or one successful project. Employees should demonstrate consistent impact, sound judgment, ownership beyond their current scope, and behaviors expected at the next level before a promotion is approved.
+
+Promotions require manager recommendation, department head approval, and HR review. The manager must submit a promotion case describing the employee's current role, proposed role, evidence of next-level performance, business need, compensation recommendation, and effective date. Human Resources reviews fairness, role alignment, leveling consistency, compensation range, and documentation quality.
+
+Promotion cycles normally occur twice per year after performance reviews. Off-cycle promotions may be considered for exceptional business needs, retention risk, or role changes, but they require senior leadership approval. Employees should discuss career goals with their manager during one-on-one meetings and should ask for specific feedback about readiness for the next level.
+
+Promotions may involve a title change, compensation adjustment, new responsibilities, reporting changes, or a combination of these. A promotion is effective only after written confirmation from Human Resources. Managers should not promise promotions, pay changes, or title changes before approvals are complete.
+
+Code of Conduct
+
+Employees must treat colleagues, customers, partners, candidates, and vendors with respect. Harassment, discrimination, bullying, threats, retaliation, and abusive conduct are prohibited. This applies in offices, remote work channels, company events, customer sites, business travel, social events connected to work, and online spaces where employees represent the company.
+
+Employees should communicate professionally and assume accountability for the impact of their words and actions. Disagreement is acceptable and often valuable, but it must be handled constructively. Employees should challenge ideas with evidence, listen to other perspectives, avoid personal attacks, and escalate unresolved conflict through appropriate channels.
+
+Conflicts of interest must be disclosed. Examples include outside employment with a competitor, financial interests in a vendor, personal relationships that affect reporting lines, gifts that influence business decisions, or using company resources for personal business. Disclosure does not always mean the activity is prohibited, but the company must review and manage the risk.
+
+Employees must follow anti-bribery, anti-corruption, competition, export control, and trade compliance requirements. Gifts and entertainment must be modest, infrequent, lawful, and properly recorded. Employees must never offer, request, or accept anything of value to improperly influence a business decision. Questions should be directed to Legal before acting.
+
+IT Security Policy
+
+Security is part of every employee's job. Employees must use approved systems, protect credentials, report suspicious activity, and handle data according to classification rules. Security controls are designed to protect customers, employees, intellectual property, and business operations. Attempting to bypass security controls without authorization is prohibited.
+
+Company devices must run approved endpoint protection, disk encryption, screen lock, and current security updates. Employees must not disable security tools, install unapproved software, or connect unknown removable media to company devices. Lost or stolen devices must be reported to Security immediately, even if the employee believes the device is encrypted.
+
+Confidential company files must not be stored on personal cloud drives. Approved company storage systems must be used for company documents, customer files, source code, credentials, and business records. Employees should share files using approved permission settings and should remove access when it is no longer needed. Sensitive files should not be sent to personal email accounts.
+
+Security incidents include phishing, malware alerts, suspicious logins, accidental data sharing, lost devices, unauthorized access, exposed credentials, and customer data concerns. Employees must report suspected incidents immediately through the security reporting channel. Early reporting is expected and will not be punished when the employee acted in good faith.
+
+Password Policy
+
+Passwords must be rotated every 90 days. Passwords must be unique to company systems and must not be reused from personal accounts or other employers. Employees should use the approved password manager to create and store strong passwords. Passwords should not be written on paper, stored in plain text files, posted in chat messages, or shared with colleagues.
+
+Multi-factor authentication is required for company systems that support it. Employees must protect security keys, authenticator apps, recovery codes, and backup factors. A request to approve an unexpected login should be treated as suspicious and reported to Security. Employees must not approve authentication prompts unless they initiated the login.
+
+Privileged accounts require additional care. Administrator credentials may be used only for approved administrative work and must not be used for routine browsing, email, or personal tasks. Access should follow least privilege. Managers must review access periodically and remove access when an employee changes roles, leaves a project, or no longer needs a system.
+
+Password resets and account recovery must follow the approved identity verification process. Employees should contact the service desk if they suspect a password has been exposed. Security may require immediate password rotation, token revocation, endpoint checks, or other actions to protect company systems.
+
+Benefits
+
+The company offers benefits designed to support health, financial security, learning, and work-life balance. Benefit eligibility depends on employment classification, location, plan terms, and applicable law. Human Resources publishes plan documents and enrollment windows each year. If this handbook conflicts with an official plan document, the plan document controls.
+
+Benefits may include medical insurance, dental insurance, vision insurance, life insurance, disability coverage, retirement savings, employee assistance services, wellness resources, parental leave, and paid time off. Employees should review coverage options carefully and make elections before enrollment deadlines. Some changes can be made only during open enrollment or after a qualifying life event.
+
+Employees receive two paid volunteer days each calendar year. Volunteer days may be used for service with eligible nonprofit, educational, environmental, community, or public-interest organizations. Volunteer days must be approved by the manager in advance and recorded in the time-off system. Unused volunteer days do not carry over and are not paid out at separation.
+
+Learning benefits may include role-related training, certification reimbursement, conferences, books, courses, and internal mentoring. Training expenses require manager approval before purchase. Employees who attend external training should share useful learning with their team when practical. Certification costs may require repayment if the employee leaves shortly after reimbursement, depending on local rules and written agreements.
+
+Termination Policy
+
+Employment may end through resignation, retirement, role elimination, mutual separation, termination for performance, termination for misconduct, or other lawful reasons. Employees who resign are asked to provide at least two weeks' written notice when possible. The company may accept the resignation immediately, adjust duties during the notice period, or place the employee on paid garden leave where allowed.
+
+Before the final day, employees must return company property, transfer work materials, update project documentation, submit final expenses, and cooperate with transition planning. Company property includes laptops, monitors, phones, badges, keys, security tokens, credit cards, documents, storage devices, and any other issued equipment. Access to company systems may be reduced or removed before the final day to protect business operations.
+
+Final pay, unused leave treatment, benefits continuation, equity, bonuses, and repayment obligations are handled according to applicable law, plan terms, and written agreements. Human Resources will provide separation information and answer administrative questions. Employees remain bound by confidentiality, intellectual property, non-solicitation, and other continuing obligations after employment ends.
+
+Misconduct may result in disciplinary action up to and including immediate termination. Examples include theft, fraud, harassment, workplace violence, serious safety violations, falsifying records, misuse of confidential information, unauthorized system access, bribery, retaliation, and serious policy violations. The company will review available facts before making decisions and may involve Legal, Security, Finance, or outside advisors when needed.
+
+Attendance and Availability
+
+Reliable attendance is essential for team planning and customer commitments. Employees should begin work on time, attend scheduled meetings, and communicate early when they will be late, unavailable, or unable to meet a deadline. Managers should define team-specific expectations for daily check-ins, meeting participation, response times, and escalation channels. Employees should not assume that flexible work means unpredictable availability.
+
+When an employee is unexpectedly absent, the employee should notify the manager as soon as practical and should provide enough information to support coverage planning. The employee does not need to disclose private medical details, but should explain the expected duration of the absence when known. If the absence affects a customer commitment, production system, legal deadline, payroll process, or other critical activity, the employee should also notify the appropriate backup contact.
+
+Repeated unplanned absences, unexplained absences, or failure to follow notification procedures may lead to coaching or disciplinary action. The company will consider protected leave rights, disability accommodations, local law, and individual circumstances before taking action. Managers should consult Human Resources before addressing attendance concerns that may involve medical, family, safety, or legally protected issues.
+
+Employees should keep emergency contact information current in the HR system. Emergency contacts are used only when the company has a reasonable concern for the employee's safety, when required by law, or when needed to respond to an urgent workplace matter. Employees who travel for business should make sure their itinerary and contact information are accurate in the travel system.
+
+Communication Standards
+
+Clear communication reduces rework and builds trust. Employees should use the appropriate channel for the urgency and sensitivity of the message. Chat is suitable for quick coordination, email for formal decisions and external communication, project tools for task tracking, and meetings for discussion that requires interaction. Important decisions should be documented in a place the team can find later.
+
+Employees should write messages with context, ownership, and next steps. A useful status update describes what changed, what is blocked, what decision is needed, and when the next update will occur. Employees should avoid vague escalation, unnecessary urgency, and excessive copying of people who are not involved. Managers should model concise communication and should make priorities visible to the team.
+
+Meetings should have a clear purpose, necessary attendees, and expected outcome. Recurring meetings should be reviewed periodically and canceled when they no longer serve a purpose. Meeting notes should capture decisions, action items, owners, and deadlines when the topic affects project execution or cross-team coordination. Employees are encouraged to decline meetings politely when their participation is not needed and to ask for notes instead.
+
+External communication must be professional and accurate. Employees should not speak on behalf of the company to the press, investors, analysts, regulators, or public audiences unless authorized. Customer commitments about pricing, delivery dates, security controls, legal terms, product features, or service levels must be coordinated with the appropriate business owner. Employees should not publish confidential information on social media, personal blogs, public repositories, or community forums.
+
+Data Handling and Privacy
+
+Employees must handle data according to its classification and business purpose. Public information may be shared externally when approved. Internal information should be shared only within the company. Confidential information should be shared only with people who need it for their work. Restricted information, such as customer secrets, personal data, payroll records, legal advice, security findings, and unreleased financial information, requires the highest level of care.
+
+Personal data must be collected, used, stored, and deleted according to privacy requirements. Employees should collect only the data needed for a legitimate business purpose and should not keep personal data longer than necessary. Requests from individuals about their data should be routed to Legal or Privacy. Employees should not export personal data to unapproved tools, spreadsheets, or personal devices.
+
+Customer data must be used only for authorized support, implementation, security, analytics, or contractual purposes. Employees must not browse customer data out of curiosity or use it for unrelated work. Access to customer environments should be logged where systems support logging. Any suspected customer data exposure, misdirected message, incorrect permission, or accidental download must be reported immediately.
+
+Records must be retained according to the company's retention schedule. Employees should not delete documents that are subject to a legal hold, audit request, investigation, or regulatory requirement. Legal will notify affected employees when a legal hold applies. Employees who are unsure whether a document should be retained should ask Legal before deleting or altering it.
+
+Equipment and Asset Use
+
+Company assets are provided for business purposes. Assets include laptops, mobile devices, monitors, software licenses, cloud accounts, source code, credentials, documents, office furniture, payment cards, and brand materials. Employees should use assets responsibly, keep them secure, and avoid unnecessary damage or loss. Personal use should be limited, lawful, and not interfere with work or security.
+
+Software must be approved before installation on company devices or use with company data. Unapproved software may create licensing, malware, data transfer, or confidentiality risks. Open source software may be used according to engineering guidelines, license review requirements, and security review processes. Employees must not use pirated software, shared personal licenses, or trial software in production work without approval.
+
+Source code, documentation, designs, inventions, templates, scripts, models, prompts, and other work created for the company belong to the company unless a written agreement states otherwise. Employees should store work product in company repositories and approved systems. Work product should not be stored only on a local device or personal account. Employees leaving the company must not copy company materials for later use.
+
+Company offices and equipment should be kept safe and orderly. Employees should report damaged equipment, unsafe conditions, unauthorized visitors, and facility issues. Access badges must not be loaned to others. Visitors must follow office sign-in procedures and should be escorted in restricted areas. Employees should challenge tailgating politely or report concerns to Facilities or Security.
+
+Health, Safety, and Wellbeing
+
+The company aims to provide a safe workplace. Employees should follow safety instructions, report hazards, and cooperate with emergency procedures. Workplace injuries, near misses, unsafe conditions, and security concerns should be reported promptly. Employees should know the location of exits, first aid supplies, emergency contacts, and assembly points when working in a company office.
+
+Employees should not work when they are impaired by alcohol, drugs, fatigue, or illness in a way that creates safety risks or prevents effective performance. Alcohol may be served at approved company events, but employees are expected to drink responsibly and respect colleagues who choose not to drink. Illegal drug use at work or while representing the company is prohibited. Local laws and accommodation obligations will be followed.
+
+The company supports mental health and wellbeing through manager support, employee assistance resources, time off, and reasonable accommodations. Employees who are struggling should consider speaking with their manager, Human Resources, or the employee assistance provider. Managers should respond with respect, protect privacy, and avoid making medical judgments. Urgent safety concerns should be escalated immediately.
+
+Reasonable accommodations may be available for disability, pregnancy, religious practice, or other legally protected needs. Employees should contact Human Resources to begin the accommodation process. The company will review requests through an interactive process and may ask for appropriate documentation. Approved accommodations should be documented and reviewed when job duties or circumstances change.
+
+Learning, Development, and Career Growth
+
+Employees are expected to keep building skills that support their current role and future company needs. Development can include project experience, mentoring, feedback, training, certification, reading, communities of practice, job shadowing, and stretch assignments. Managers should discuss development regularly and should help employees identify practical growth opportunities.
+
+A development plan should include a small number of focused goals. Useful development goals describe the skill to build, the reason it matters, the activity that will build it, and the evidence that progress has been made. Examples include leading a release review, presenting a technical design, mentoring a new employee, improving a dashboard, completing a certification, or documenting a repeated operational process.
+
+Employees should ask for feedback from managers, peers, customers, and project partners. Feedback should be specific, timely, and oriented toward behavior or results. Employees receiving feedback should listen carefully, ask clarifying questions, and decide what action to take. Managers should avoid saving important feedback only for formal review cycles.
+
+Internal mobility is encouraged when business needs and employee readiness align. Employees interested in another role should discuss timing with their manager and review internal job postings. Internal candidates are expected to follow the same interview and selection standards as external candidates. Employees should not be penalized for expressing interest in growth opportunities, but transitions must be planned responsibly.
+
+Manager Responsibilities
+
+Managers are responsible for setting direction, aligning work to priorities, developing employees, managing risk, and applying policies fairly. A manager should make expectations clear, provide timely feedback, remove blockers, and escalate issues that require broader support. Managers should document important employment decisions and consult Human Resources before making decisions that affect pay, role, leave, accommodation, discipline, or separation.
+
+Managers should create an environment where employees can raise concerns and admit mistakes early. A manager should not retaliate against an employee for reporting a concern, asking for policy guidance, requesting leave, participating in an investigation, or using a protected right. Retaliation can include demotion, exclusion, threats, poor assignments, schedule punishment, harassment, or negative treatment because of a protected action.
+
+Managers must review access, expenses, time records, performance documentation, and staffing needs with care. Approvals should not be treated as routine clicks. A manager approving an expense, access request, or leave request is confirming that the request is appropriate, documented, and aligned with business needs. When a manager is unsure, they should ask Finance, Security, Legal, or Human Resources before approving.
+
+Managers should support inclusion by distributing opportunities fairly, listening to diverse perspectives, addressing disrespectful behavior, and making decisions based on evidence. Hiring, promotion, compensation, and performance decisions should be based on role requirements and documented impact. Managers should be alert to bias and should invite review when a decision may appear inconsistent.
+
+Compliance and Reporting Concerns
+
+Employees are expected to follow laws, regulations, contracts, and company policies that apply to their work. This includes privacy, security, employment, anti-bribery, export control, intellectual property, competition, procurement, financial reporting, and customer contract requirements. Employees are not expected to be legal experts, but they are expected to ask for guidance before taking action in uncertain situations.
+
+Concerns may be reported to a manager, Human Resources, Legal, Security, Finance, or the anonymous ethics channel. Employees should provide as much relevant information as they can, including dates, people involved, systems, documents, and why the issue appears concerning. Reports may be made anonymously where allowed by law. The company will review reports fairly and will protect confidentiality to the extent practical.
+
+Investigations must be handled by authorized personnel. Employees should not conduct their own investigation, search private files, confront witnesses aggressively, or promise outcomes. Employees who are asked to participate in an investigation must be truthful and cooperative. Records related to an investigation must not be destroyed, altered, or hidden.
+
+The company prohibits retaliation against anyone who raises a concern in good faith, participates in an investigation, refuses to engage in illegal conduct, or exercises a protected right. Good faith does not mean the concern must ultimately be proven; it means the employee honestly believed there was a possible issue. Retaliation concerns should be reported immediately.

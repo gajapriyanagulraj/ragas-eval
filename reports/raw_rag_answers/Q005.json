@@ -1,0 +1,22 @@
+{
+  "id": "Q005",
+  "question": "How frequently are performance reviews conducted?",
+  "answer": "Performance reviews are conducted twice per year.",
+  "contexts": [
+    "Company credit cards may be issued to employees who travel frequently or make recurring approved purchases. Cardholders must use the card only for business expenses and must submit receipts by the published deadline. Lost or stolen cards must be reported immediately to Finance and Security. Misuse of a company card may result in card cancellation, repayment obligations, disciplinary action, or termination.\n\nPerformance Reviews\n\nPerformance reviews are conducted twice per year. The midyear review focuses on progress, feedback, changing priorities, and development needs. The year-end review evaluates results, impact, collaboration, values, and readiness for future responsibilities. Managers should provide feedback throughout the year so review outcomes do not come as a surprise.",
+    "Promotions require manager recommendation, department head approval, and HR review. The manager must submit a promotion case describing the employee's current role, proposed role, evidence of next-level performance, business need, compensation recommendation, and effective date. Human Resources reviews fairness, role alignment, leveling consistency, compensation range, and documentation quality.\n\nPromotion cycles normally occur twice per year after performance reviews. Off-cycle promotions may be considered for exceptional business needs, retention risk, or role changes, but they require senior leadership approval. Employees should discuss career goals with their manager during one-on-one meetings and should ask for specific feedback about readiness for the next level.",
+    "Employees and managers should set measurable goals aligned to team priorities. Good goals define expected outcomes, key milestones, dependencies, and quality expectations. Goals may change when business priorities change. When goals change, the manager and employee should document the update and discuss how success will be measured.\n\nPerformance is assessed using multiple inputs, including goal achievement, quality of work, customer impact, ownership, communication, collaboration, security awareness, and demonstration of company values. For people managers, performance also includes team health, coaching, hiring quality, execution discipline, inclusion, and responsible resource planning.",
+    "If performance concerns arise, managers should address them promptly and directly. A performance improvement plan may be used when expectations are not being met. The plan should describe specific gaps, required improvements, support available, checkpoints, and timeline. Successful completion of a plan does not guarantee future employment, and failure to improve may lead to further action.\n\nPromotion Process\n\nPromotions recognize sustained performance at a higher level of responsibility. A promotion is not based only on tenure, effort, or one successful project. Employees should demonstrate consistent impact, sound judgment, ownership beyond their current scope, and behaviors expected at the next level before a promotion is approved.",
+    "Probationary periods, introductory reviews, and employment eligibility checks may apply depending on role and location. New employees are expected to complete onboarding tasks, security training, required tax forms, and benefits enrollment by the published deadlines. Managers should set clear goals for the first 30, 60, and 90 days and provide practical feedback during onboarding.\n\nLeave Policy\n\nRegular full-time employees receive 24 days of annual leave per year. Annual leave is intended for vacation, rest, personal commitments, and planned time away from work. Part-time employees receive prorated annual leave based on their scheduled hours. Annual leave accrues throughout the year unless local law or a written employment agreement provides a different method."
+  ],
+  "sources": [
+    "employee_handbook.txt"
+  ],
+  "ground_truth": "Performance reviews are conducted twice per year.",
+  "retrieval_time_ms": 343.51,
+  "generation_time_ms": 486.23,
+  "total_latency_ms": 829.74,
+  "input_tokens": 793,
+  "output_tokens": 65,
+  "total_tokens": 858
+}
