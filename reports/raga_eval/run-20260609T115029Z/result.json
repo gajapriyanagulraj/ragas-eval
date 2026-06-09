@@ -1,0 +1,391 @@
+{
+  "release_id": "employee-rag-v1.0.0",
+  "run_id": "run-20260609T115029Z",
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "How many annual leave days are employees entitled to?",
+      "expected_answer": "Employees receive 24 days of annual leave per year.",
+      "generated_answer": "Regular full-time employees are entitled to 24 days of annual leave per year, while part-time employees receive prorated annual leave based on their scheduled hours.",
+      "retrieval": {
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "response_relevance": 0.523
+      },
+      "rag_system": {
+        "completeness": 0.607,
+        "hallucination_rate": 0.0
+      },
+      "performance": {
+        "latency_ms": 36518.74,
+        "prompt_tokens": 680,
+        "completion_tokens": 33,
+        "total_tokens": 713
+      },
+      "quality_gates": {
+        "context_precision": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "context_recall": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "faithfulness": {
+          "actual": 1.0,
+          "threshold": 0.85,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "response_relevance": {
+          "actual": 0.523,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "completeness": {
+          "actual": 0.607,
+          "threshold": 0.8,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "hallucination_rate": {
+          "actual": 0.0,
+          "threshold": 0.1,
+          "status": "PASS",
+          "rule": "actual <= threshold"
+        }
+      },
+      "failure_reasons": [
+        {
+          "metric": "response_relevance",
+          "actual": 0.523,
+          "threshold": 0.85,
+          "reason": "0.523 is below the required threshold of 0.85."
+        },
+        {
+          "metric": "completeness",
+          "actual": 0.607,
+          "threshold": 0.8,
+          "reason": "0.607 is below the required threshold of 0.8."
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "Q002",
+      "question": "Can employees work remotely from another country?",
+      "expected_answer": "Remote work from another country requires manager and HR approval.",
+      "generated_answer": "Yes, but it requires manager and HR approval, and employees must not begin working from another country until approval is documented.",
+      "retrieval": {
+        "context_precision": 0.95,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "faithfulness": 0.75,
+        "response_relevance": 0.6954
+      },
+      "rag_system": {
+        "completeness": 0.86,
+        "hallucination_rate": 0.25
+      },
+      "performance": {
+        "latency_ms": 11175.88,
+        "prompt_tokens": 489,
+        "completion_tokens": 25,
+        "total_tokens": 514
+      },
+      "quality_gates": {
+        "context_precision": {
+          "actual": 0.95,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "context_recall": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "faithfulness": {
+          "actual": 0.75,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "response_relevance": {
+          "actual": 0.6954,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "completeness": {
+          "actual": 0.86,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "hallucination_rate": {
+          "actual": 0.25,
+          "threshold": 0.1,
+          "status": "FAIL",
+          "rule": "actual <= threshold"
+        }
+      },
+      "failure_reasons": [
+        {
+          "metric": "faithfulness",
+          "actual": 0.75,
+          "threshold": 0.85,
+          "reason": "0.75 is below the required threshold of 0.85."
+        },
+        {
+          "metric": "response_relevance",
+          "actual": 0.6954,
+          "threshold": 0.85,
+          "reason": "0.6954 is below the required threshold of 0.85."
+        },
+        {
+          "metric": "hallucination_rate",
+          "actual": 0.25,
+          "threshold": 0.1,
+          "reason": "0.25 is above the allowed maximum of 0.1."
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "Q003",
+      "question": "What is the reimbursement limit for travel expenses?",
+      "expected_answer": "Travel expenses are reimbursed up to $2000 per trip.",
+      "generated_answer": "The reimbursement limit for travel expenses is $2000 per trip. Expenses above this limit require written approval from the department head before they are incurred.",
+      "retrieval": {
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "response_relevance": 0.5566
+      },
+      "rag_system": {
+        "completeness": 0.7261,
+        "hallucination_rate": 0.0
+      },
+      "performance": {
+        "latency_ms": 93001.47,
+        "prompt_tokens": 544,
+        "completion_tokens": 30,
+        "total_tokens": 574
+      },
+      "quality_gates": {
+        "context_precision": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "context_recall": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "faithfulness": {
+          "actual": 1.0,
+          "threshold": 0.85,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "response_relevance": {
+          "actual": 0.5566,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "completeness": {
+          "actual": 0.7261,
+          "threshold": 0.8,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "hallucination_rate": {
+          "actual": 0.0,
+          "threshold": 0.1,
+          "status": "PASS",
+          "rule": "actual <= threshold"
+        }
+      },
+      "failure_reasons": [
+        {
+          "metric": "response_relevance",
+          "actual": 0.5566,
+          "threshold": 0.85,
+          "reason": "0.5566 is below the required threshold of 0.85."
+        },
+        {
+          "metric": "completeness",
+          "actual": 0.7261,
+          "threshold": 0.8,
+          "reason": "0.7261 is below the required threshold of 0.8."
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "Q004",
+      "question": "How often must passwords be changed?",
+      "expected_answer": "Passwords must be rotated every 90 days.",
+      "generated_answer": "Passwords must be rotated every 90 days.",
+      "retrieval": {
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "response_relevance": 0.5489
+      },
+      "rag_system": {
+        "completeness": 1.0,
+        "hallucination_rate": 0.0
+      },
+      "performance": {
+        "latency_ms": 3165.08,
+        "prompt_tokens": 749,
+        "completion_tokens": 10,
+        "total_tokens": 759
+      },
+      "quality_gates": {
+        "context_precision": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "context_recall": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "faithfulness": {
+          "actual": 1.0,
+          "threshold": 0.85,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "response_relevance": {
+          "actual": 0.5489,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "completeness": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "hallucination_rate": {
+          "actual": 0.0,
+          "threshold": 0.1,
+          "status": "PASS",
+          "rule": "actual <= threshold"
+        }
+      },
+      "failure_reasons": [
+        {
+          "metric": "response_relevance",
+          "actual": 0.5489,
+          "threshold": 0.85,
+          "reason": "0.5489 is below the required threshold of 0.85."
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "Q005",
+      "question": "How frequently are performance reviews conducted?",
+      "expected_answer": "Performance reviews are conducted twice per year.",
+      "generated_answer": "Performance reviews are conducted twice per year. The midyear review and the year-end review.",
+      "retrieval": {
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "response_relevance": 0.5129
+      },
+      "rag_system": {
+        "completeness": 0.6152,
+        "hallucination_rate": 0.0
+      },
+      "performance": {
+        "latency_ms": 3462.1,
+        "prompt_tokens": 750,
+        "completion_tokens": 19,
+        "total_tokens": 769
+      },
+      "quality_gates": {
+        "context_precision": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "context_recall": {
+          "actual": 1.0,
+          "threshold": 0.8,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "faithfulness": {
+          "actual": 1.0,
+          "threshold": 0.85,
+          "status": "PASS",
+          "rule": "actual >= threshold"
+        },
+        "response_relevance": {
+          "actual": 0.5129,
+          "threshold": 0.85,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "completeness": {
+          "actual": 0.6152,
+          "threshold": 0.8,
+          "status": "FAIL",
+          "rule": "actual >= threshold"
+        },
+        "hallucination_rate": {
+          "actual": 0.0,
+          "threshold": 0.1,
+          "status": "PASS",
+          "rule": "actual <= threshold"
+        }
+      },
+      "failure_reasons": [
+        {
+          "metric": "response_relevance",
+          "actual": 0.5129,
+          "threshold": 0.85,
+          "reason": "0.5129 is below the required threshold of 0.85."
+        },
+        {
+          "metric": "completeness",
+          "actual": 0.6152,
+          "threshold": 0.8,
+          "reason": "0.6152 is below the required threshold of 0.8."
+        }
+      ],
+      "status": "FAIL"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "release_id": "employee-rag-v1.0.0",
+  "run_id": "run-20260609T115029Z",
+  "status": "FAIL",
+  "summary": {
+    "questions_evaluated": 5,
+    "gates_passed": 3,
+    "gates_failed": 2
+  },
+  "metrics": {
+    "retrieval": {
+      "context_precision": 0.99,
+      "context_recall": 1.0,
+      "context_relevance": 0.99
+    },
+    "generation": {
+      "faithfulness": 0.95,
+      "response_relevance": 0.5674
+    },
+    "rag_system": {
+      "completeness": 0.7617,
+      "hallucination_rate": 0.05
+    }
+  },
+  "performance": {
+    "avg_retrieval_latency_ms": 570.196,
+    "avg_generation_latency_ms": 28894.46,
+    "avg_total_latency_ms": 29464.654,
+    "avg_prompt_tokens": 642.4,
+    "avg_completion_tokens": 23.4,
+    "avg_total_tokens": 665.8
+  },
+  "quality_gates": {
+    "context_relevance": {
+      "actual": 0.99,
+      "threshold": 0.8,
+      "status": "PASS"
+    },
+    "faithfulness": {
+      "actual": 0.95,
+      "threshold": 0.85,
+      "status": "PASS"
+    },
+    "response_relevance": {
+      "actual": 0.5674,
+      "threshold": 0.85,
+      "status": "FAIL"
+    },
+    "completeness": {
+      "actual": 0.7617,
+      "threshold": 0.8,
+      "status": "FAIL"
+    },
+    "hallucination_rate": {
+      "actual": 0.05,
+      "threshold": 0.1,
+      "status": "PASS"
+    }
+  },
+  "release_decision": {
+    "approved": false,
+    "blocking_issues": [
+      "response_relevance",
+      "completeness"
+    ]
+  }
+}

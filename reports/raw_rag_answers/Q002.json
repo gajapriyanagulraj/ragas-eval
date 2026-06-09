@@ -1,0 +1,22 @@
+{
+  "id": "Q002",
+  "question": "Can employees work remotely from another country?",
+  "answer": "Yes, but it requires manager and HR approval, and employees must not begin working from another country until approval is documented.",
+  "contexts": [
+    "Remote work from another country requires manager and HR approval. Employees must not begin working from another country until approval is documented. International remote work can create immigration, tax, payroll, benefits, insurance, and data transfer obligations for both the employee and the company. The company may deny or limit international remote work even when the employee can perform the job technically from that location.",
+    "Remote Work Policy\n\nRemote work means performing the role from a location away from the assigned office on a recurring or long-term basis. Remote work arrangements must be approved by the employee's manager and Human Resources. Approval depends on role suitability, customer requirements, employment law, tax obligations, payroll feasibility, data security, time zone coverage, and team operating needs.",
+    "Remote employees must remain reachable during agreed working hours, attend required meetings, meet performance standards, and travel to company or customer sites when required by the role. Travel for required events may be reimbursed according to the travel policy if approved in advance. Remote work approval can be changed or withdrawn if business needs change, performance issues arise, security requirements cannot be met, or the arrangement becomes impractical.\n\nTravel Policy",
+    "Work From Home Policy\n\nRagPro Systems supports work from home when the role, team needs, and employee performance allow it. Employees working from home are expected to maintain a professional workspace, reliable internet connection, secure device handling, and normal availability during agreed working hours. Working from home is a work arrangement, not a substitute for dependent care, medical leave, or other protected time away.",
+    "Employees who want to relocate must submit a request before changing their primary work location. The request should include the proposed city and country, expected start date, duration, working hours, and reason for relocation. Human Resources will review legal and payroll feasibility. Managers will review customer impact, collaboration needs, and time zone coverage. A relocation request is not approved until the employee receives written confirmation."
+  ],
+  "sources": [
+    "employee_handbook.txt"
+  ],
+  "ground_truth": "Remote work from another country requires manager and HR approval.",
+  "retrieval_time_ms": 375.97,
+  "generation_time_ms": 10799.91,
+  "total_latency_ms": 11175.88,
+  "input_tokens": 489,
+  "output_tokens": 25,
+  "total_tokens": 514
+}

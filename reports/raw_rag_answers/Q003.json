@@ -1,0 +1,22 @@
+{
+  "id": "Q003",
+  "question": "What is the reimbursement limit for travel expenses?",
+  "answer": "The reimbursement limit for travel expenses is $2000 per trip. Expenses above this limit require written approval from the department head before they are incurred.",
+  "contexts": [
+    "Travel expenses are reimbursed up to $2000 per trip. This limit includes airfare, lodging, local transportation, meals, baggage fees, visa fees, and other ordinary business travel costs. Expenses above the limit require written approval from the department head before they are incurred. Conference fees, customer event fees, and group travel booked centrally may be budgeted separately when approved by Finance.",
+    "Employees should book flights, hotels, and rental cars through the approved travel platform when available. Economy class is the standard for flights under six hours. Premium economy or business class may be approved for longer flights, medical accommodations, or customer requirements. Employees should choose safe, reasonably priced lodging near the business location. Luxury hotels, unnecessary upgrades, and personal travel costs are not reimbursable.",
+    "Expense Reimbursement\n\nEmployees should spend company funds carefully and only for approved business purposes. Reimbursable expenses include reasonable business travel, approved customer meals, required software, role-specific supplies, professional memberships, and training approved by the manager. Expenses must be supported by receipts, business purpose, date, amount, vendor, and attendee names when meals or events are involved.",
+    "Employees may combine personal travel with business travel if the arrangement does not increase company cost, interfere with work obligations, or create security issues. The company will reimburse only the business portion of the trip. Personal guests, vacation lodging, sightseeing, personal insurance, and leisure upgrades are not reimbursable. Employees must clearly separate personal and business costs in the expense report.\n\nExpense Reimbursement",
+    "Expense reports should be submitted within 15 calendar days of completing travel or making an approved business purchase. Late submissions may be delayed, denied, or require additional approval. Employees should submit expenses through the company's expense system and should use the correct project code, cost center, and currency. Finance may request clarification or additional documentation before processing reimbursement.\n\nEmployees must not split expenses to avoid approval thresholds, create false receipts, submit personal purchases as business expenses, or approve their own expenses. Managers are responsible for reviewing expenses for business purpose, policy compliance, and budget availability. Finance performs periodic audits and may require repayment of improper reimbursements."
+  ],
+  "sources": [
+    "employee_handbook.txt"
+  ],
+  "ground_truth": "Travel expenses are reimbursed up to $2000 per trip.",
+  "retrieval_time_ms": 361.96,
+  "generation_time_ms": 92639.51,
+  "total_latency_ms": 93001.47,
+  "input_tokens": 544,
+  "output_tokens": 30,
+  "total_tokens": 574
+}

@@ -12,8 +12,6 @@ chroma_db/
 # python evaluation/generate_answers.py --force
 # python evaluation/ragas_eval.py
 evaluation/results/
-reports/raw_rag_answers/
-reports/raga_eval/
 
 # Local tool/cache artifacts
 .pytest_cache/
