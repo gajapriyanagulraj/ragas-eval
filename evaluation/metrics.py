@@ -137,14 +137,64 @@ def build_question_reports(
         context_precision_score = _score(result["context_precision"])
         context_recall_score = _score(result["context_recall"])
         hallucination_rate = _derived_hallucination_rate(faithfulness_score)
-        question_statuses = [
-            _metric_status(context_precision_score, gates["context_precision"]),
-            _metric_status(context_recall_score, gates["context_recall"]),
-            _metric_status(faithfulness_score, gates["faithfulness"]),
-            _metric_status(answer_correctness_score, gates["answer_correctness"]),
-            _metric_status(hallucination_rate, gates["hallucination_rate"], lower_is_better=True),
+        quality_gates = {
+            "context_precision": {
+                "actual": context_precision_score,
+                "threshold": gates["context_precision"],
+                "status": _metric_status(context_precision_score, gates["context_precision"]),
+                "rule": "actual >= threshold",
+            },
+            "context_recall": {
+                "actual": context_recall_score,
+                "threshold": gates["context_recall"],
+                "status": _metric_status(context_recall_score, gates["context_recall"]),
+                "rule": "actual >= threshold",
+            },
+            "faithfulness": {
+                "actual": faithfulness_score,
+                "threshold": gates["faithfulness"],
+                "status": _metric_status(faithfulness_score, gates["faithfulness"]),
+                "rule": "actual >= threshold",
+            },
+            "response_relevance": {
+                "actual": answer_relevancy_score,
+                "threshold": gates["answer_relevancy"],
+                "status": _metric_status(answer_relevancy_score, gates["answer_relevancy"]),
+                "rule": "actual >= threshold",
+            },
+            "completeness": {
+                "actual": answer_correctness_score,
+                "threshold": gates["answer_correctness"],
+                "status": _metric_status(answer_correctness_score, gates["answer_correctness"]),
+                "rule": "actual >= threshold",
+            },
+            "hallucination_rate": {
+                "actual": hallucination_rate,
+                "threshold": gates["hallucination_rate"],
+                "status": _metric_status(
+                    hallucination_rate,
+                    gates["hallucination_rate"],
+                    lower_is_better=True,
+                ),
+                "rule": "actual <= threshold",
+            },
+        }
+        failure_reasons = [
+            {
+                "metric": metric,
+                "actual": gate["actual"],
+                "threshold": gate["threshold"],
+                "reason": gate_reason(
+                    metric,
+                    gate["actual"],
+                    gate["threshold"],
+                    gate["status"],
+                ),
+            }
+            for metric, gate in quality_gates.items()
+            if gate["status"] != "PASS"
         ]
-        question_status = "PASS" if all(status == "PASS" for status in question_statuses) else "FAIL"
+        question_status = "PASS" if not failure_reasons else "FAIL"
 
         question_reports.append(
             {
@@ -170,6 +220,8 @@ def build_question_reports(
                     "completion_tokens": answer_record.get("output_tokens", 0),
                     "total_tokens": answer_record.get("total_tokens", 0),
                 },
+                "quality_gates": quality_gates,
+                "failure_reasons": failure_reasons,
                 "status": question_status,
             }
         )
