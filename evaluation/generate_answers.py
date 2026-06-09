@@ -13,7 +13,7 @@ from src.config import (  # noqa: E402
     QA_DATASET_PATH,
     RAW_RAG_ANSWERS_DIR,
 )
-from src.langsmith_observability import create_rag_trace  # noqa: E402
+from src.langsmith_observability import create_rag_trace, flush_langsmith  # noqa: E402
 from src.rag import HandbookRAG  # noqa: E402
 
 
@@ -98,6 +98,7 @@ def main() -> None:
 
     records = generate_answer_records(force=args.force)
     save_answer_records(records)
+    flush_langsmith()
     print(f"Saved {len(records)} answer records to {ANSWER_RECORDS_PATH}")
     print(f"Saved raw RAG answer files to {RAW_RAG_ANSWERS_DIR}")
 

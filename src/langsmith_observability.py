@@ -19,6 +19,8 @@ try:
 except ImportError:  # pragma: no cover - optional dependency guard
     Client = None  # type: ignore[assignment]
 
+_LANGSMITH_CLIENT: Any | None = None
+
 
 def is_langsmith_enabled() -> bool:
     return bool(
@@ -29,9 +31,22 @@ def is_langsmith_enabled() -> bool:
 
 
 def _client() -> Any | None:
+    global _LANGSMITH_CLIENT
     if not is_langsmith_enabled():
         return None
-    return Client()
+    if _LANGSMITH_CLIENT is None:
+        _LANGSMITH_CLIENT = Client()
+    return _LANGSMITH_CLIENT
+
+
+def flush_langsmith() -> None:
+    client = _client()
+    if client is None:
+        return
+    try:
+        client.flush()
+    except Exception as error:  # pragma: no cover - network/provider dependent
+        print(f"LangSmith flush skipped: {error}", flush=True)
 
 
 def _manifest_metadata() -> dict[str, Any]:

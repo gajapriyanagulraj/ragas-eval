@@ -47,6 +47,7 @@ from src.langsmith_observability import (  # noqa: E402
     create_feedback_scores,
     create_or_update_dataset,
     ensure_rag_trace,
+    flush_langsmith,
 )
 
 
@@ -359,6 +360,7 @@ def main() -> None:
         result_path=output_paths["result_json"],
         scorecard_path=output_paths["scorecard_json"],
     )
+    flush_langsmith()
 
     print(pd.DataFrame(results))
     print(f"Saved RAGAS evaluation report to {output_paths['result_json']}")
