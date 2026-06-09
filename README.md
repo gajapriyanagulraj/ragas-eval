@@ -23,8 +23,10 @@ NVIDIA Llama 3.3 70B Instruct
      |
 Answer + Sources
      |
-Offline Evaluation + Scorecard
+RAGAS Evaluation + Scorecard
 ```
+
+For the full architecture mindmap and end-to-end flow, see [ARCHITECTURE_FLOW.md](ARCHITECTURE_FLOW.md).
 
 ## Setup
 

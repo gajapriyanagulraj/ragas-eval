@@ -8,6 +8,8 @@ Build a simple RAG system that can answer employee handbook questions, then eval
 
 ## Architecture
 
+For the Mermaid mindmap, runtime sequence, and report flow, see [ARCHITECTURE_FLOW.md](ARCHITECTURE_FLOW.md).
+
 ```text
                          data/employee_handbook.txt
                                    |
