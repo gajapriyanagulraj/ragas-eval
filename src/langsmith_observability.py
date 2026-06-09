@@ -115,18 +115,14 @@ def ensure_rag_trace(
     question_record: dict[str, Any],
     evaluation_run_id: str,
 ) -> str | None:
-    existing_run_id = question_record.get("langsmith_run_id")
-    if existing_run_id:
-        return str(existing_run_id)
-
     client = _client()
     if client is None:
         return None
 
-    run_id = uuid4()
     metadata = {
         **_manifest_metadata(),
         "evaluation_run_id": evaluation_run_id,
+        "run_id": evaluation_run_id,
         "question_id": question_record.get("id"),
         "contexts_retrieved": len(question_record.get("contexts", [])),
         "retrieval_latency_ms": question_record.get("retrieval_time_ms"),
@@ -137,6 +133,27 @@ def ensure_rag_trace(
         "total_tokens": question_record.get("total_tokens"),
     }
 
+    existing_run_id = question_record.get("langsmith_run_id")
+    if existing_run_id:
+        try:
+            client.update_run(
+                existing_run_id,
+                extra={"metadata": metadata},
+                tags=[
+                    "rag",
+                    "employee-handbook",
+                    "ragas-evaluation",
+                    evaluation_run_id,
+                ],
+            )
+        except Exception as error:  # pragma: no cover - network/provider dependent
+            print(
+                f"LangSmith trace metadata update skipped for {question_record.get('id')}: {error}",
+                flush=True,
+            )
+        return str(existing_run_id)
+
+    run_id = uuid4()
     try:
         client.create_run(
             id=run_id,
@@ -152,7 +169,7 @@ def ensure_rag_trace(
             start_time=datetime.now(UTC),
             end_time=datetime.now(UTC),
             extra={"metadata": metadata},
-            tags=["rag", "employee-handbook", "ragas-evaluation"],
+            tags=["rag", "employee-handbook", "ragas-evaluation", evaluation_run_id],
         )
     except Exception as error:  # pragma: no cover - network/provider dependent
         print(
@@ -258,6 +275,7 @@ def create_evaluation_summary_run(
     metadata = {
         **_manifest_metadata(),
         "evaluation_run_id": report["run_id"],
+        "run_id": report["run_id"],
         "result": str(result_path),
         "scorecard": str(scorecard_path),
         "status": report["summary"]["overall_status"],
@@ -288,7 +306,7 @@ def create_evaluation_summary_run(
             start_time=datetime.now(UTC),
             end_time=datetime.now(UTC),
             extra={"metadata": metadata},
-            tags=["ragas", "scorecard", "employee-handbook"],
+            tags=["ragas", "scorecard", "employee-handbook", report["run_id"]],
         )
     except Exception as error:  # pragma: no cover - network/provider dependent
         print(f"LangSmith evaluation summary skipped: {error}", flush=True)

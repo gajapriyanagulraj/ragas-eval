@@ -212,6 +212,31 @@ Governance
   evaluation run id
 ```
 
+## Filter By Run ID
+
+Every question trace and the evaluation summary run are tagged with the evaluation run ID.
+
+Example:
+
+```text
+run-20260609T170918Z
+```
+
+In LangSmith, filter the tracing table by tag:
+
+```text
+tag:run-20260609T170918Z
+```
+
+The same value is also stored in metadata:
+
+```text
+metadata.run_id = run-20260609T170918Z
+metadata.evaluation_run_id = run-20260609T170918Z
+```
+
+Use this to show only one evaluation execution in the dashboard.
+
 ## Run Flow
 
 Fresh answer generation:
