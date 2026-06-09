@@ -1,6 +1,7 @@
 import json
 import sys
 import time
+import argparse
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -22,12 +23,12 @@ def load_qa_dataset() -> list[dict[str, str]]:
     return rows
 
 
-def generate_answer_records() -> list[dict[str, object]]:
+def generate_answer_records(force: bool = False) -> list[dict[str, object]]:
     qa_rows = load_qa_dataset()
     rag = HandbookRAG()
 
     records = []
-    if ANSWER_RECORDS_PATH.exists():
+    if ANSWER_RECORDS_PATH.exists() and not force:
         records = json.loads(ANSWER_RECORDS_PATH.read_text(encoding="utf-8"))
 
     dataset_ids = {row["id"] for row in qa_rows}
@@ -80,7 +81,15 @@ def save_answer_records(records: list[dict[str, object]]) -> None:
 
 
 def main() -> None:
-    records = generate_answer_records()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Regenerate all answer records even if cached records already exist.",
+    )
+    args = parser.parse_args()
+
+    records = generate_answer_records(force=args.force)
     save_answer_records(records)
     print(f"Saved {len(records)} answer records to {ANSWER_RECORDS_PATH}")
     print(f"Saved raw RAG answer files to {RAW_RAG_ANSWERS_DIR}")

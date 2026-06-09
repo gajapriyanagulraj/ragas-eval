@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-from src.config import GROQ_API_KEY, GROQ_BASE_URL, GROQ_MODEL
+from src.config import NVIDIA_API_KEY, NVIDIA_BASE_URL, NVIDIA_MODEL
 
 SYSTEM_PROMPT = """You are an employee handbook assistant.
 
@@ -20,11 +20,11 @@ Question:
 """
 
 
-class GroqLLM:
-    def __init__(self, api_key: str | None = GROQ_API_KEY, model: str = GROQ_MODEL):
-        if not api_key or api_key == "your_groq_api_key":
-            raise RuntimeError("Set GROQ_API_KEY in .env before generating answers.")
-        self.client = OpenAI(api_key=api_key, base_url=GROQ_BASE_URL)
+class NvidiaLLM:
+    def __init__(self, api_key: str | None = NVIDIA_API_KEY, model: str = NVIDIA_MODEL):
+        if not api_key or api_key == "your_nvidia_api_key":
+            raise RuntimeError("Set NVIDIA_API_KEY in .env before generating answers.")
+        self.client = OpenAI(api_key=api_key, base_url=NVIDIA_BASE_URL)
         self.model = model
 
     def answer(self, question: str, context: str) -> str:

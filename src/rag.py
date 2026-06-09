@@ -1,6 +1,6 @@
 from time import perf_counter
 
-from src.llm import GroqLLM
+from src.llm import NvidiaLLM
 from src.retriever import HandbookRetriever
 
 
@@ -15,10 +15,10 @@ class HandbookRAG:
     def __init__(
         self,
         retriever: HandbookRetriever | None = None,
-        llm: GroqLLM | None = None,
+        llm: NvidiaLLM | None = None,
     ):
         self.retriever = retriever or HandbookRetriever()
-        self.llm = llm or GroqLLM()
+        self.llm = llm or NvidiaLLM()
 
     def ask(self, question: str) -> dict[str, object]:
         retrieval_start = perf_counter()

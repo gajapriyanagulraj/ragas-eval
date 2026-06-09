@@ -20,11 +20,11 @@ def load_manifest(path: Path = MANIFEST_PATH) -> dict[str, Any]:
 
 def validate_manifest(manifest: dict[str, Any]) -> None:
     required_gates = {
-        "context_relevance",
-        "faithfulness",
-        "response_relevance",
-        "completeness",
-        "hallucination_rate",
+        "min_context_relevance",
+        "min_faithfulness",
+        "min_response_relevance",
+        "min_completeness",
+        "max_hallucination_rate",
     }
     gates = manifest.get("gates")
     if not isinstance(gates, dict):
@@ -44,12 +44,13 @@ def validate_manifest(manifest: dict[str, Any]) -> None:
 
 def evaluation_metadata(manifest: dict[str, Any]) -> dict[str, Any]:
     return {
-        "release_id": manifest["version"],
+        "release_id": manifest["release_id"],
         "environment": manifest["environment"],
         "dataset": manifest["dataset"]["path"],
         "dataset_version": manifest["dataset"].get("version"),
         "embedding_model": manifest["retrieval"]["embedding_model"],
         "llm": manifest["model"]["name"],
+        "evaluator": manifest["evaluation"].get("evaluator"),
         "chunk_size": manifest["retrieval"]["chunk_size"],
         "chunk_overlap": manifest["retrieval"]["chunk_overlap"],
         "top_k": manifest["retrieval"]["top_k"],
@@ -61,10 +62,10 @@ def evaluation_metadata(manifest: dict[str, Any]) -> dict[str, Any]:
 def quality_gates(manifest: dict[str, Any]) -> dict[str, float]:
     gates = manifest["gates"]
     return {
-        "faithfulness": gates["faithfulness"],
-        "answer_relevancy": gates["response_relevance"],
-        "answer_correctness": gates["completeness"],
-        "context_precision": gates["context_relevance"],
-        "context_recall": gates["context_relevance"],
-        "hallucination_rate": gates["hallucination_rate"],
+        "faithfulness": gates["min_faithfulness"],
+        "answer_relevancy": gates["min_response_relevance"],
+        "answer_correctness": gates["min_completeness"],
+        "context_precision": gates["min_context_relevance"],
+        "context_recall": gates["min_context_relevance"],
+        "hallucination_rate": gates["max_hallucination_rate"],
     }

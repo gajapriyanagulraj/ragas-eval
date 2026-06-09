@@ -1,6 +1,6 @@
 # Employee Handbook RAG Evaluation Project
 
-This project implements a complete Retrieval-Augmented Generation workflow and an offline evaluation pipeline for an employee handbook assistant.
+This project implements a complete Retrieval-Augmented Generation workflow and a RAGAS evaluation pipeline for an employee handbook assistant.
 
 ## Objective
 
@@ -33,7 +33,7 @@ User Question ---> Query Embedding ---> Similarity Search top_k=5
                             Retrieved Contexts
                                    |
                                    v
-                          Groq GPT-OSS-120B
+                          NVIDIA Llama 3.3 70B Instruct
                                    |
                                    v
                           Answer + Sources
@@ -42,7 +42,7 @@ User Question ---> Query Embedding ---> Similarity Search top_k=5
                          Raw RAG Answer Files
                                    |
                                    v
-                        Offline RAG Evaluation
+                            RAGAS Evaluation
                                    |
                                    v
                      Result JSON/YAML + Scorecard
@@ -64,7 +64,7 @@ Process:
 
 ```text
 Retrieve relevant handbook chunks from ChromaDB
-Send retrieved chunks to Groq
+Send retrieved chunks to NVIDIA Llama 3.3 70B Instruct
 Generate grounded answer
 Return answer and source
 ```
@@ -176,9 +176,9 @@ token usage
 python evaluation/ragas_eval.py
 ```
 
-This reads the saved raw RAG answers and calculates local evaluation scores.
+This reads the saved raw RAG answers and runs real RAGAS metrics with `ragas.evaluate(...)`.
 
-It does not call Groq or Voyage for scoring.
+RAGAS uses an evaluator LLM and embeddings for semantic scoring.
 
 Scores:
 
@@ -194,10 +194,10 @@ hallucination rate
 Outputs:
 
 ```text
-reports/raga_eval/result.json
-reports/raga_eval/result.yaml
-reports/raga_eval/scorecard.md
-reports/raga_eval/scorecard.json
+reports/raga_eval/<run_id>/result.json
+reports/raga_eval/<run_id>/result.yaml
+reports/raga_eval/<run_id>/scorecard.md
+reports/raga_eval/<run_id>/scorecard.json
 ```
 
 ## Result vs Scorecard
@@ -245,7 +245,7 @@ hallucination rate > hallucination gate  -> fail
 source .venv/bin/activate
 python evaluation/generate_answers.py
 python evaluation/ragas_eval.py
-cat reports/raga_eval/scorecard.md
+cat reports/raga_eval/<run_id>/scorecard.md
 ```
 
 ## When To Rerun Each Step
@@ -274,7 +274,7 @@ Rerun evaluation when changing:
 
 ```text
 gates
-offline scoring logic
+RAGAS scoring configuration
 report format
 ```
 
@@ -302,10 +302,10 @@ This project now works as:
 
 ```text
 RAG app:
-handbook -> embeddings -> ChromaDB -> retrieved context -> Groq answer
+handbook -> embeddings -> ChromaDB -> retrieved context -> NVIDIA Llama 3.3 70B Instruct answer
 
 Evaluation:
-dataset -> raw RAG answers -> offline scores -> pass/fail scorecard
+dataset -> raw RAG answers -> RAGAS scores -> pass/fail scorecard
 
 Governance:
 manifest -> fixed config + thresholds -> reproducible evaluation

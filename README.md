@@ -19,7 +19,7 @@ ChromaDB
      |
 Retriever
      |
-GPT-OSS-120B on Groq
+NVIDIA Llama 3.3 70B Instruct
      |
 Answer + Sources
      |
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 ```env
 VOYAGE_API_KEY=your_voyage_api_key
-GROQ_API_KEY=your_groq_api_key
+NVIDIA_API_KEY=your_nvidia_api_key
 ```
 
 4. Ingest the handbook into ChromaDB.
@@ -66,13 +66,13 @@ All chunks indexed in ChromaDB: <number> chunks
 streamlit run ui/app.py
 ```
 
-6. Run offline evaluation using the manifest metadata.
+6. Run RAGAS evaluation using the manifest metadata.
 
 ```bash
 python evaluation/ragas_eval.py
 ```
 
-This scoring step uses local lexical proxy metrics from saved answer records. It does not call Groq or Voyage for scoring. The evaluation pipeline writes JSON/YAML results with a `run_id`:
+This scoring step uses real RAGAS metrics from saved answer records. It uses NVIDIA Llama 3.3 70B Instruct as the evaluator LLM and Voyage as evaluator embeddings. The evaluation pipeline writes JSON/YAML results with a `run_id`:
 
 ```text
 evaluation/results/answer_records.json
@@ -81,10 +81,10 @@ reports/raw_rag_answers/Q002.json
 reports/raw_rag_answers/Q003.json
 reports/raw_rag_answers/Q004.json
 reports/raw_rag_answers/Q005.json
-reports/raga_eval/result.json
-reports/raga_eval/result.yaml
-reports/raga_eval/scorecard.md
-reports/raga_eval/scorecard.json
+reports/raga_eval/<run_id>/result.json
+reports/raga_eval/<run_id>/result.yaml
+reports/raga_eval/<run_id>/scorecard.md
+reports/raga_eval/<run_id>/scorecard.json
 ```
 
 You can also run each stage separately:

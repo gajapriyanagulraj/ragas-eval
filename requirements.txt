@@ -2,7 +2,7 @@ chromadb
 voyageai
 openai
 streamlit
-ragas
+ragas==0.4.3
 datasets
 pandas
 python-dotenv

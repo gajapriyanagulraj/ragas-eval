@@ -1,17 +1,21 @@
-version: employee-rag-v1.0.0
+release_id: employee-rag-v1.0.0
+manifest_version: 1.0
+created_at: "2026-06-09T00:00:00Z"
 environment: dev
+rag_framework: langchain
 
 model:
-  provider: groq
-  name: openai/gpt-oss-120b
-  base_url: https://api.groq.com/openai/v1
-  api_key: GROQ_API_KEY
+  provider: nvidia
+  name: meta/llama-3.3-70b-instruct
+  base_url: https://integrate.api.nvidia.com/v1
+  api_key_env: NVIDIA_API_KEY
   temperature: 0.1
   max_tokens: 1000
 
 dataset:
   path: evaluation/qa_dataset.json
   version: 1.0
+  questions: 5
 
 prompt:
   name: employee_assistant
@@ -31,21 +35,34 @@ retrieval:
 
 evaluation:
   ragas: true
-  scoring_mode: offline_proxy
-  metrics:
+  scoring_mode: ragas_llm_as_judge
+  evaluator:
+    provider: nvidia
+    name: meta/llama-3.3-70b-instruct
+    base_url: https://integrate.api.nvidia.com/v1
+    api_key_env: NVIDIA_API_KEY
+  retrieval_metrics:
+    - context_precision
+    - context_recall
+  generation_metrics:
     - faithfulness
     - answer_relevancy
     - answer_correctness
-    - context_precision
-    - context_recall
+  derived_metrics:
+    - context_relevance
+    - completeness
+    - hallucination_rate
 
 performance:
   capture_latency: true
   capture_token_usage: true
 
 gates:
-  context_relevance: 0.80
-  faithfulness: 0.85
-  response_relevance: 0.85
-  completeness: 0.80
-  hallucination_rate: 0.10
+  min_context_relevance: 0.80
+  min_faithfulness: 0.85
+  min_response_relevance: 0.85
+  min_completeness: 0.80
+  max_hallucination_rate: 0.10
+
+governance:
+  immutable: true
