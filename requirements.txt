@@ -10,3 +10,4 @@ pyyaml
 langchain-text-splitters
 langchain-openai
 langchain-voyageai
+langsmith

@@ -27,6 +27,7 @@ RAGAS Evaluation + Scorecard
 ```
 
 For the full architecture mindmap and end-to-end flow, see [ARCHITECTURE_FLOW.md](ARCHITECTURE_FLOW.md).
+For LangSmith observability setup and dashboard details, see [LANGSMITH_DASHBOARD.md](LANGSMITH_DASHBOARD.md).
 
 ## Setup
 
@@ -48,6 +49,9 @@ pip install -r requirements.txt
 ```env
 VOYAGE_API_KEY=your_voyage_api_key
 NVIDIA_API_KEY=your_nvidia_api_key
+LANGCHAIN_API_KEY=your_langsmith_api_key
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_PROJECT=employee-rag-evaluation
 ```
 
 4. Ingest the handbook into ChromaDB.

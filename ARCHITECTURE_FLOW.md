@@ -45,6 +45,15 @@ mindmap
         faithfulness
         answer_relevancy
         answer_correctness
+    LangSmith Observability
+      Project
+        employee-rag-evaluation
+      Traces
+        Q001-Q005 RAG calls
+      Feedback
+        RAGAS metric scores
+      Dataset
+        Employee Handbook Evaluation
     Reporting
       Per Question Result
         result.json
@@ -89,10 +98,13 @@ flowchart TD
     M --> N[ragas.evaluate]
     N --> O[RAGAS metrics]
     O --> P[metrics.py report builder]
+    O --> V[LangSmith feedback scores]
+    I --> W[LangSmith RAG traces]
     P --> Q[reports/raga_eval/run_id/result.json]
     P --> R[reports/raga_eval/run_id/result.yaml]
     P --> S[reports/raga_eval/run_id/scorecard.json]
     P --> T[reports/raga_eval/run_id/scorecard.md]
+    P --> X[LangSmith dataset view]
 
     U[manifests/employee-rag-v1.0.0.yaml] --> B
     U --> L
@@ -168,6 +180,16 @@ reports/
         ├── scorecard.json
         └── scorecard.md
 ```
+
+## LangSmith Dashboard
+
+LangSmith is the visualization layer for the same evaluation artifacts.
+
+```text
+RAG trace -> RAGAS feedback scores -> dataset view -> dashboard inspection
+```
+
+For setup and dashboard details, see [LANGSMITH_DASHBOARD.md](LANGSMITH_DASHBOARD.md).
 
 ## Release Decision Logic
 

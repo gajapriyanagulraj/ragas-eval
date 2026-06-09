@@ -30,6 +30,8 @@ NVIDIA_MODEL = "meta/llama-3.3-70b-instruct"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 HF_EVAL_MODEL = "openai/gpt-oss-20b:fireworks-ai"
 HF_BASE_URL = "https://router.huggingface.co/v1"
+LANGSMITH_PROJECT = "employee-rag-evaluation"
+LANGSMITH_DATASET_NAME = "Employee Handbook Evaluation"
 
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 150
@@ -43,3 +45,6 @@ VOYAGE_API_KEY = os.getenv("VOYAGE_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 HF_TOKEN = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_HUB_TOKEN")
+LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY")
+LANGCHAIN_TRACING_V2 = os.getenv("LANGCHAIN_TRACING_V2", "").lower()
+LANGCHAIN_PROJECT = os.getenv("LANGCHAIN_PROJECT") or LANGSMITH_PROJECT

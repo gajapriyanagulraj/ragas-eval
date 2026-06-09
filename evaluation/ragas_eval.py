@@ -42,6 +42,12 @@ from src.config import (  # noqa: E402
 )
 from src.manifest import evaluation_metadata, load_manifest, quality_gates  # noqa: E402
 from evaluation.metrics import build_report, write_report  # noqa: E402
+from src.langsmith_observability import (  # noqa: E402
+    create_evaluation_summary_run,
+    create_feedback_scores,
+    create_or_update_dataset,
+    ensure_rag_trace,
+)
 
 
 def build_run_id() -> str:
@@ -255,6 +261,10 @@ def add_metadata_and_gate_statuses(
         answer_correctness_score = score_value(row.get("answer_correctness"))
         context_precision_score = score_value(row.get("context_precision"))
         context_recall_score = score_value(row.get("context_recall"))
+        langsmith_run_id = ensure_rag_trace(
+            question_record=source_record,
+            evaluation_run_id=run_id,
+        )
 
         result = {
             "run_id": run_id,
@@ -282,7 +292,28 @@ def add_metadata_and_gate_statuses(
             ),
             "context_recall": context_recall_score,
             "context_recall_status": score_status(context_recall_score, gates["context_recall"]),
+            "langsmith_run_id": langsmith_run_id,
         }
+        create_feedback_scores(
+            langsmith_run_id=langsmith_run_id,
+            scores={
+                "context_precision": context_precision_score,
+                "context_recall": context_recall_score,
+                "faithfulness": faithfulness_score,
+                "response_relevance": answer_relevancy_score,
+                "completeness": answer_correctness_score,
+                "hallucination_rate": (
+                    round(1 - faithfulness_score, 4)
+                    if faithfulness_score is not None
+                    else None
+                ),
+            },
+            metadata={
+                "evaluation_run_id": run_id,
+                "release_id": metadata["release_id"],
+                "question_id": source_record["id"],
+            },
+        )
         results.append({key: normalize_value(value) for key, value in result.items()})
 
     return results
@@ -318,6 +349,16 @@ def main() -> None:
     )
     report = build_report(run_id=run_id, results=results)
     output_paths = write_report(report, output_dir=RAGA_EVAL_DIR / run_id)
+    create_or_update_dataset(
+        questions=report["question_results"],
+        run_id=run_id,
+        scorecard_path=output_paths["scorecard_json"],
+    )
+    create_evaluation_summary_run(
+        report=report,
+        result_path=output_paths["result_json"],
+        scorecard_path=output_paths["scorecard_json"],
+    )
 
     print(pd.DataFrame(results))
     print(f"Saved RAGAS evaluation report to {output_paths['result_json']}")

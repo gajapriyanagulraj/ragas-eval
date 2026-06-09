@@ -57,6 +57,14 @@ performance:
   capture_latency: true
   capture_token_usage: true
 
+observability:
+  provider: langsmith
+  enabled: true
+  project: employee-rag-evaluation
+  dataset: Employee Handbook Evaluation
+  trace_rag_pipeline: true
+  push_ragas_feedback: true
+
 gates:
   min_context_relevance: 0.80
   min_faithfulness: 0.85

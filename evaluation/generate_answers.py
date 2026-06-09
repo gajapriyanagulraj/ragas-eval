@@ -13,6 +13,7 @@ from src.config import (  # noqa: E402
     QA_DATASET_PATH,
     RAW_RAG_ANSWERS_DIR,
 )
+from src.langsmith_observability import create_rag_trace  # noqa: E402
 from src.rag import HandbookRAG  # noqa: E402
 
 
@@ -41,6 +42,11 @@ def generate_answer_records(force: bool = False) -> list[dict[str, object]]:
 
         print(f"Generating {row['id']}: {row['question']}", flush=True)
         result = rag.ask(row["question"])
+        langsmith_run_id = create_rag_trace(
+            question_id=row["id"],
+            question=row["question"],
+            rag_result=result,
+        )
         records.append(
             {
                 "id": row["id"],
@@ -55,6 +61,7 @@ def generate_answer_records(force: bool = False) -> list[dict[str, object]]:
                 "input_tokens": result["input_tokens"],
                 "output_tokens": result["output_tokens"],
                 "total_tokens": result["total_tokens"],
+                "langsmith_run_id": langsmith_run_id,
             }
         )
         save_answer_records(records)
