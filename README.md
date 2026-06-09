@@ -27,6 +27,7 @@ RAGAS Evaluation + Scorecard
 ```
 
 For the full architecture mindmap and end-to-end flow, see [ARCHITECTURE_FLOW.md](ARCHITECTURE_FLOW.md).
+For a simple one-page RAGAS flow diagram, see [SIMPLE_FLOW_DIAGRAM.md](SIMPLE_FLOW_DIAGRAM.md).
 For LangSmith observability setup and dashboard details, see [LANGSMITH_DASHBOARD.md](LANGSMITH_DASHBOARD.md).
 
 ## Setup
