@@ -242,11 +242,11 @@ Current gates:
 
 ```yaml
 gates:
-  context_relevance: 0.80
-  faithfulness: 0.85
-  response_relevance: 0.85
-  completeness: 0.80
-  hallucination_rate: 0.10
+  min_context_relevance: 0.80
+  min_faithfulness: 0.85
+  min_response_relevance: 0.85
+  min_completeness: 0.80
+  max_hallucination_rate: 0.10
 ```
 
 The evaluator compares RAGAS scores against these gates.
@@ -270,7 +270,7 @@ hallucination_rate > 0.10  -> fail
 The evaluation report is stored in:
 
 ```text
-reports/raga_eval/
+reports/raga_eval/<run_id>/
 ```
 
 Files:
@@ -282,9 +282,9 @@ reports/raga_eval/<run_id>/scorecard.md
 reports/raga_eval/<run_id>/scorecard.json
 ```
 
-`result.json` and `result.yaml` are detailed machine-readable results.
+`result.json` and `result.yaml` are detailed per-question machine-readable results.
 
-`scorecard.md` is the clean human-readable summary.
+`scorecard.json` and `scorecard.md` are release-level summaries with average scores, gate status, and release decision.
 
 ## Summary
 

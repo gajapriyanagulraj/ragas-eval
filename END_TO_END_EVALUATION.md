@@ -281,11 +281,11 @@ Current gates:
 
 ```yaml
 gates:
-  context_relevance: 0.80
-  faithfulness: 0.85
-  response_relevance: 0.85
-  completeness: 0.80
-  hallucination_rate: 0.10
+  min_context_relevance: 0.80
+  min_faithfulness: 0.85
+  min_response_relevance: 0.85
+  min_completeness: 0.80
+  max_hallucination_rate: 0.10
 ```
 
 Pass/fail rules:
@@ -321,13 +321,14 @@ These contain:
 ```text
 run_id
 release_id
-manifest file
-overall scores
-quality gates
-failure reasons
+question
+expected answer
+generated answer
 per-question retrieval scores
 per-question generation scores
+per-question RAG system scores
 per-question performance
+per-question status
 ```
 
 Each question is grouped like this:
@@ -338,8 +339,6 @@ Each question is grouped like this:
   "question": "...",
   "expected_answer": "...",
   "generated_answer": "...",
-  "raw_answer_file": "reports/raw_rag_answers/Q001.json",
-  "contexts_retrieved": 5,
   "retrieval": {
     "context_precision": 1.0,
     "context_recall": 1.0
@@ -349,17 +348,16 @@ Each question is grouped like this:
     "response_relevance": 0.5417
   },
   "rag_system": {
-    "hallucination_rate": 0.0,
-    "completeness": 0.7322
+    "completeness": 0.7322,
+    "hallucination_rate": 0.0
   },
   "performance": {
-    "retrieval_latency_ms": 528.32,
-    "generation_latency_ms": 901.18,
-    "total_latency_ms": 1429.5,
+    "latency_ms": 1429.5,
     "prompt_tokens": 721,
     "completion_tokens": 127,
     "total_tokens": 848
-  }
+  },
+  "status": "FAIL"
 }
 ```
 

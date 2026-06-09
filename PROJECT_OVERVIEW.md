@@ -128,11 +128,11 @@ The gate thresholds are:
 
 ```yaml
 gates:
-  context_relevance: 0.80
-  faithfulness: 0.85
-  response_relevance: 0.85
-  completeness: 0.80
-  hallucination_rate: 0.10
+  min_context_relevance: 0.80
+  min_faithfulness: 0.85
+  min_response_relevance: 0.85
+  min_completeness: 0.80
+  max_hallucination_rate: 0.10
 ```
 
 The evaluator validates that all gate values are numeric values between 0 and 1.
@@ -170,7 +170,7 @@ generation latency
 token usage
 ```
 
-### Step 2: Run Offline Evaluation
+### Step 2: Run RAGAS Evaluation
 
 ```bash
 python evaluation/ragas_eval.py
@@ -202,24 +202,39 @@ reports/raga_eval/<run_id>/scorecard.json
 
 ## Result vs Scorecard
 
-`result.json` and `result.yaml` are detailed machine-readable outputs.
+`result.json` and `result.yaml` are detailed per-question machine-readable outputs.
 
 They include:
 
 ```text
 run_id
 release_id
-manifest file
-gates
-threshold validation
-overall scores
-quality gate status
-performance
-token usage
-per-question results
+question
+expected answer
+generated answer
+per-question retrieval scores
+per-question generation scores
+per-question RAG system scores
+per-question latency
+per-question token usage
+per-question status
 ```
 
-`scorecard.md` is the clean human-readable summary for review or demo.
+`scorecard.json` and `scorecard.md` are the clean release-level summaries for review or demo.
+
+They include:
+
+```text
+run_id
+release_id
+overall status
+average metric scores
+average latency
+average token usage
+quality gates
+release decision
+blocking issues
+```
 
 ## Quality Gate
 
@@ -290,10 +305,11 @@ reports/
 │   └── Q005.json
 │
 └── raga_eval/
-    ├── result.json
-    ├── result.yaml
-    ├── scorecard.json
-    └── scorecard.md
+    └── <run_id>/
+        ├── result.json
+        ├── result.yaml
+        ├── scorecard.json
+        └── scorecard.md
 ```
 
 ## Summary
