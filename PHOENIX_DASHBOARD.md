@@ -188,6 +188,36 @@ ragas_question_evaluation
 employee_rag_ragas_evaluation
 ```
 
+## Publish An Existing Report
+
+If a report already exists locally, you can push it to Phoenix without rerunning RAG or RAGAS.
+
+Example:
+
+```bash
+python evaluation/publish_report_to_phoenix.py run-20260609T170918Z
+```
+
+This reads:
+
+```text
+reports/raga_eval/run-20260609T170918Z/result.json
+reports/raga_eval/run-20260609T170918Z/scorecard.json
+```
+
+and creates Phoenix spans:
+
+```text
+ragas_question_report
+employee_rag_report_scorecard
+```
+
+Filter by:
+
+```text
+run_id = run-20260609T170918Z
+```
+
 ## Local Reports Remain Source Of Record
 
 Phoenix is for observability and visualization.

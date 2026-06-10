@@ -54,7 +54,7 @@ def _setup_phoenix() -> bool:
         if PHOENIX_COLLECTOR_ENDPOINT:
             register(
                 project_name=PHOENIX_PROJECT_NAME,
-                endpoint=PHOENIX_COLLECTOR_ENDPOINT,
+                endpoint=_collector_endpoint(),
             )
         else:
             register(project_name=PHOENIX_PROJECT_NAME)
@@ -66,6 +66,13 @@ def _setup_phoenix() -> bool:
 
     _PHOENIX_READY = True
     return True
+
+
+def _collector_endpoint() -> str:
+    endpoint = str(PHOENIX_COLLECTOR_ENDPOINT).rstrip("/")
+    if endpoint.endswith("/v1/traces"):
+        return endpoint
+    return f"{endpoint}/v1/traces"
 
 
 def _tracer() -> Any | None:
@@ -227,5 +234,104 @@ def record_evaluation_summary(
                     "avg_completion_tokens"
                 ),
                 "tokens.avg_total_tokens": report["tokens"].get("avg_total_tokens"),
+            },
+        )
+
+
+def record_saved_question_report(
+    *,
+    run_id: str,
+    question: dict[str, Any],
+) -> None:
+    tracer = _tracer()
+    if tracer is None:
+        return
+
+    retrieval = question.get("retrieval", {})
+    generation = question.get("generation", {})
+    rag_system = question.get("rag_system", {})
+    performance = question.get("performance", {})
+
+    with tracer.start_as_current_span("ragas_question_report") as span:
+        _set_attributes(
+            span,
+            {
+                **_manifest_metadata(),
+                "run_id": run_id,
+                "evaluation_run_id": run_id,
+                "question_id": question.get("id"),
+                "status": question.get("status"),
+                "input.question": question.get("question"),
+                "reference.answer": question.get("expected_answer"),
+                "output.answer": question.get("generated_answer"),
+                "retrieval.context_precision": retrieval.get("context_precision"),
+                "retrieval.context_recall": retrieval.get("context_recall"),
+                "generation.faithfulness": generation.get("faithfulness"),
+                "generation.response_relevance": generation.get("response_relevance"),
+                "rag_system.completeness": rag_system.get("completeness"),
+                "rag_system.hallucination_rate": rag_system.get("hallucination_rate"),
+                "performance.latency_ms": performance.get("latency_ms"),
+                "tokens.prompt": performance.get("prompt_tokens"),
+                "tokens.completion": performance.get("completion_tokens"),
+                "tokens.total": performance.get("total_tokens"),
+                "failure_reasons": question.get("failure_reasons", []),
+            },
+        )
+
+
+def record_saved_scorecard(
+    *,
+    scorecard: dict[str, Any],
+    result_path: Path,
+    scorecard_path: Path,
+) -> None:
+    tracer = _tracer()
+    if tracer is None:
+        return
+
+    metrics = scorecard.get("metrics", {})
+    retrieval = metrics.get("retrieval", {})
+    generation = metrics.get("generation", {})
+    rag_system = metrics.get("rag_system", {})
+    performance = scorecard.get("performance", {})
+    release_decision = scorecard.get("release_decision", {})
+
+    with tracer.start_as_current_span("employee_rag_report_scorecard") as span:
+        _set_attributes(
+            span,
+            {
+                **_manifest_metadata(),
+                "run_id": scorecard.get("run_id"),
+                "evaluation_run_id": scorecard.get("run_id"),
+                "release_id": scorecard.get("release_id"),
+                "status": scorecard.get("status"),
+                "result": str(result_path),
+                "scorecard": str(scorecard_path),
+                "questions_evaluated": scorecard.get("summary", {}).get(
+                    "questions_evaluated"
+                ),
+                "gates_passed": scorecard.get("summary", {}).get("gates_passed"),
+                "gates_failed": scorecard.get("summary", {}).get("gates_failed"),
+                "release.approved": release_decision.get("approved"),
+                "release.blocking_issues": release_decision.get("blocking_issues", []),
+                "retrieval.context_precision": retrieval.get("context_precision"),
+                "retrieval.context_recall": retrieval.get("context_recall"),
+                "retrieval.context_relevance": retrieval.get("context_relevance"),
+                "generation.faithfulness": generation.get("faithfulness"),
+                "generation.response_relevance": generation.get("response_relevance"),
+                "rag_system.completeness": rag_system.get("completeness"),
+                "rag_system.hallucination_rate": rag_system.get("hallucination_rate"),
+                "performance.avg_retrieval_latency_ms": performance.get(
+                    "avg_retrieval_latency_ms"
+                ),
+                "performance.avg_generation_latency_ms": performance.get(
+                    "avg_generation_latency_ms"
+                ),
+                "performance.avg_total_latency_ms": performance.get(
+                    "avg_total_latency_ms"
+                ),
+                "tokens.avg_prompt_tokens": performance.get("avg_prompt_tokens"),
+                "tokens.avg_completion_tokens": performance.get("avg_completion_tokens"),
+                "tokens.avg_total_tokens": performance.get("avg_total_tokens"),
             },
         )
