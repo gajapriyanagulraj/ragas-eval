@@ -28,7 +28,7 @@ RAGAS Evaluation + Scorecard
 
 For the full architecture mindmap and end-to-end flow, see [ARCHITECTURE_FLOW.md](ARCHITECTURE_FLOW.md).
 For a simple one-page RAGAS flow diagram, see [SIMPLE_FLOW_DIAGRAM.md](SIMPLE_FLOW_DIAGRAM.md).
-For LangSmith observability setup and dashboard details, see [LANGSMITH_DASHBOARD.md](LANGSMITH_DASHBOARD.md).
+For Arize Phoenix observability setup and dashboard details, see [PHOENIX_DASHBOARD.md](PHOENIX_DASHBOARD.md).
 
 ## Setup
 
@@ -50,9 +50,9 @@ pip install -r requirements.txt
 ```env
 VOYAGE_API_KEY=your_voyage_api_key
 NVIDIA_API_KEY=your_nvidia_api_key
-LANGCHAIN_API_KEY=your_langsmith_api_key
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_PROJECT=employee-rag-evaluation
+PHOENIX_ENABLED=true
+PHOENIX_PROJECT_NAME=employee-rag-evaluation
+PHOENIX_COLLECTOR_ENDPOINT=http://localhost:6006
 ```
 
 4. Ingest the handbook into ChromaDB.

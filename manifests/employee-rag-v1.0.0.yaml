@@ -58,12 +58,12 @@ performance:
   capture_token_usage: true
 
 observability:
-  provider: langsmith
+  provider: arize_phoenix
   enabled: true
   project: employee-rag-evaluation
-  dataset: Employee Handbook Evaluation
+  collector_endpoint: http://localhost:6006
   trace_rag_pipeline: true
-  push_ragas_feedback: true
+  capture_ragas_scores: true
 
 gates:
   min_context_relevance: 0.80

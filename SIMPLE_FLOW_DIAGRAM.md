@@ -1,6 +1,6 @@
 # Simple RAGAS Evaluation Flow
 
-This is the high-level flow of the project without LangSmith.
+This is the high-level flow of the project without the observability dashboard.
 
 ## One-Page Flow
 
