@@ -30,6 +30,7 @@ NVIDIA_MODEL = "meta/llama-3.3-70b-instruct"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 HF_EVAL_MODEL = "openai/gpt-oss-20b:fireworks-ai"
 HF_BASE_URL = "https://router.huggingface.co/v1"
+PHOENIX_PROJECT_NAME_DEFAULT = "employee-rag-evaluation"
 
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 150
@@ -43,3 +44,6 @@ VOYAGE_API_KEY = os.getenv("VOYAGE_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 HF_TOKEN = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_HUB_TOKEN")
+PHOENIX_ENABLED = os.getenv("PHOENIX_ENABLED", "").lower()
+PHOENIX_PROJECT_NAME = os.getenv("PHOENIX_PROJECT_NAME") or PHOENIX_PROJECT_NAME_DEFAULT
+PHOENIX_COLLECTOR_ENDPOINT = os.getenv("PHOENIX_COLLECTOR_ENDPOINT")

@@ -57,6 +57,14 @@ performance:
   capture_latency: true
   capture_token_usage: true
 
+observability:
+  provider: arize_phoenix
+  enabled: true
+  project: employee-rag-evaluation
+  collector_endpoint: http://localhost:6006
+  trace_rag_pipeline: true
+  capture_ragas_scores: true
+
 gates:
   min_context_relevance: 0.80
   min_faithfulness: 0.85

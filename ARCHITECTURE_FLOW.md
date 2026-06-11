@@ -45,6 +45,15 @@ mindmap
         faithfulness
         answer_relevancy
         answer_correctness
+    Arize Phoenix Observability
+      Project
+        employee-rag-evaluation
+      Traces
+        Q001-Q005 RAG calls
+      RAGAS Spans
+        RAGAS metric scores
+      Summary Span
+        release decision
     Reporting
       Per Question Result
         result.json
@@ -89,10 +98,13 @@ flowchart TD
     M --> N[ragas.evaluate]
     N --> O[RAGAS metrics]
     O --> P[metrics.py report builder]
+    O --> V[Phoenix RAGAS score spans]
+    I --> W[Phoenix RAG traces]
     P --> Q[reports/raga_eval/run_id/result.json]
     P --> R[reports/raga_eval/run_id/result.yaml]
     P --> S[reports/raga_eval/run_id/scorecard.json]
     P --> T[reports/raga_eval/run_id/scorecard.md]
+    P --> X[Phoenix evaluation summary span]
 
     U[manifests/employee-rag-v1.0.0.yaml] --> B
     U --> L
@@ -168,6 +180,16 @@ reports/
         ├── scorecard.json
         └── scorecard.md
 ```
+
+## Arize Phoenix Dashboard
+
+Phoenix is the visualization layer for the same evaluation artifacts.
+
+```text
+RAG trace -> RAGAS score spans -> evaluation summary span -> dashboard inspection
+```
+
+For setup and dashboard details, see [PHOENIX_DASHBOARD.md](PHOENIX_DASHBOARD.md).
 
 ## Release Decision Logic
 

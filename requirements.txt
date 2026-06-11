@@ -10,3 +10,5 @@ pyyaml
 langchain-text-splitters
 langchain-openai
 langchain-voyageai
+arize-phoenix
+arize-phoenix-otel

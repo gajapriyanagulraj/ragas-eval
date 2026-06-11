@@ -13,6 +13,7 @@ from src.config import (  # noqa: E402
     QA_DATASET_PATH,
     RAW_RAG_ANSWERS_DIR,
 )
+from src.phoenix_observability import finish_rag_trace, trace_rag_question  # noqa: E402
 from src.rag import HandbookRAG  # noqa: E402
 
 
@@ -40,7 +41,13 @@ def generate_answer_records(force: bool = False) -> list[dict[str, object]]:
             continue
 
         print(f"Generating {row['id']}: {row['question']}", flush=True)
-        result = rag.ask(row["question"])
+        with trace_rag_question(
+            question_id=row["id"],
+            question=row["question"],
+        ) as phoenix_span:
+            result = rag.ask(row["question"])
+            phoenix_ids = finish_rag_trace(span=phoenix_span, rag_result=result)
+
         records.append(
             {
                 "id": row["id"],
@@ -55,6 +62,7 @@ def generate_answer_records(force: bool = False) -> list[dict[str, object]]:
                 "input_tokens": result["input_tokens"],
                 "output_tokens": result["output_tokens"],
                 "total_tokens": result["total_tokens"],
+                **phoenix_ids,
             }
         )
         save_answer_records(records)

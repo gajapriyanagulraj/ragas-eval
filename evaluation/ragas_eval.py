@@ -42,6 +42,10 @@ from src.config import (  # noqa: E402
 )
 from src.manifest import evaluation_metadata, load_manifest, quality_gates  # noqa: E402
 from evaluation.metrics import build_report, write_report  # noqa: E402
+from src.phoenix_observability import (  # noqa: E402
+    record_evaluation_summary,
+    record_question_evaluation,
+)
 
 
 def build_run_id() -> str:
@@ -283,6 +287,22 @@ def add_metadata_and_gate_statuses(
             "context_recall": context_recall_score,
             "context_recall_status": score_status(context_recall_score, gates["context_recall"]),
         }
+        record_question_evaluation(
+            evaluation_run_id=run_id,
+            question_record=source_record,
+            scores={
+                "context_precision": context_precision_score,
+                "context_recall": context_recall_score,
+                "faithfulness": faithfulness_score,
+                "response_relevance": answer_relevancy_score,
+                "completeness": answer_correctness_score,
+                "hallucination_rate": (
+                    round(1 - faithfulness_score, 4)
+                    if faithfulness_score is not None
+                    else None
+                ),
+            },
+        )
         results.append({key: normalize_value(value) for key, value in result.items()})
 
     return results
@@ -318,6 +338,11 @@ def main() -> None:
     )
     report = build_report(run_id=run_id, results=results)
     output_paths = write_report(report, output_dir=RAGA_EVAL_DIR / run_id)
+    record_evaluation_summary(
+        report=report,
+        result_path=output_paths["result_json"],
+        scorecard_path=output_paths["scorecard_json"],
+    )
 
     print(pd.DataFrame(results))
     print(f"Saved RAGAS evaluation report to {output_paths['result_json']}")
